@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>보드게임 규칙 편집기</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>👻 보드게임 규칙</h1>
+
+    <textarea id="rulesBox">
+1. 각 플레이어는 차례로 주사위를 굴립니다.
+2. 주사위 숫자만큼 이동합니다.
+3. 특수칸에 도착하면 해당 효과를 적용합니다.
+    </textarea>
+    <br>
+    <button onclick="saveRules()">규칙 저장</button>
+
+    <h2>🎵 배경 음악 선택</h2>
+    <div class="music-buttons">
+      <button onclick="playMusic('sangsahwa')">상사화</button>
+      <button onclick="playMusic('shaman')">무당굿</button>
+      <button onclick="playMusic('forest')">사슴신</button>
+      <button onclick="playMusic('changgwi')">창귀</button>
+    </div>
+
+    <audio id="bgm" autoplay loop></audio>
+    <button onclick="toggleMusic()">🎧 음악 켜기/끄기</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
